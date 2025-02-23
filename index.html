@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>doc</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=device=width-device,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+
+    .container {
+      width: 100%;
+      min-height: 400px;
+      //border:1px solid red;
+      margin: auto;
+    }
+
+    .main-header {
+      width: 100%;
+      height: 100px;
+      //border:1px solid green;
+      display: flex;
+      flex-direction: row;
+
+
+
+
+    }
+
+    .logo {
+      flex-directio: row;
+
+      flex-basis: 30%;
+      //border:1px solid yellow;
+      margin: 5px;
+      display: flex;
+    }
+
+    .logo i {
+      font-size: 2em;
+      margin-left: 80px;
+      line-height: 100px;
+      color: orange;
+
+    }
+
+    .logo i {
+      font-size: 3em;
+      margin-left: 80px;
+      line-height: 100px;
+      color: orange;
+
+    }
+
+    #a {
+      font-size: 3em;
+      color: skyblue;
+      margin-left: -0.90px;
+    }
+
+    .logo .l {
+      width: 200px;
+      height: 100px;
+      // background-color:green;
+    }
+
+    .logo .name {
+      width: 150px;
+      height: 100px;
+      //background-color:blue;
+      margin-top:20px;
+      display: flex;
+    }
+
+    .menu {
+      flex-basis: 35%;
+      // border:1px solid hotpink;
+      margin: 5px;
+      display: flex;
+
+    }
+
+    .search {
+      flex-basis: 10%;
+      border: 1px solid hotpink;
+      margin: 5px;
+     
+
+
+    }
+   .search i
+   {
+      font-size:3em;
+      color:orange;
+      line-height:100px;
+    }
+
+    .label {
+      flex-basis: 10%;
+      border: 1px solid hotpink;
+      margin: 5px;
+      margin-left: 70px;
+      padding-top:30px;
+         
+
+    }
+
+    .menu ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none; //it is used for . none
+      margin-top: 50px;
+
+    }
+
+    .menu li {
+      padding: 10px;
+    }
+
+
+    ul li {
+      list-style: none;
+    }
+
+    ul li a {
+      display: inline;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+
+      font-size: 1.2em;
+    }
+
+    ul li a::after {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 4px;
+      background-color: black;
+      transition: all 0.5s;
+    }
+
+    ul li a:hover::after {
+      width: 100%;
+      /*height:100px;
+ background-color:skyblue;
+ border-radius:15px;*/
+    }
+
+    .menu button {
+      background-color: orange;
+      padding: 8px 30px;
+      margin-left: 20px;
+         margin-top:10px;
+
+      border: none;
+    }
+
+    .menu button:hover {
+      background-color: lightyellow;
+      cursor: pointer;
+    }
+
+    .main-slider {
+
+      width: 100%;
+      min-height: 500px;
+      //border:1px solid hotpink;
+      background-image: url("../images/skyimages.jpg");
+      background-size: 100% 100%;
+    }
+
+    .main-slider h1 {
+      text-align: center;
+      color: white;
+      padding-top: 70px;
+      font-size: 2.5em;
+     
+    }
+
+    .main-slider h2 {
+      text-align: center;
+      color: white;
+    margin-top:30px;
+    }
+
+    .main-slider button {
+      padding: 10px 40px;
+      background-color: orange;
+      border: none;
+      border-radius: 10px;
+      margin-top: 30px;
+      margin-left: 45%;
+    }
+
+    .main-slider button:hover {
+      background-color: lightyellow;
+      cursor: pointer;
+    }
+
+    .slider {
+      width: 100%;
+      min-height: 400px;
+      // border:2px solid hotpink;
+
+    }
+
+    .b2 {
+      width: 100%;
+      height: 50px;
+      // border:1px solid hotpink;
+      margin-top: -30px;
+
+
+    }
+
+    .b2 button {
+      text-transform: capitalize;
+      padding: 15px 30px;
+      background-color: skyblue;
+      margin-left: 45%;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+
+
+    }
+
+    .b2 button:hover {
+      background-color: lightyellow;
+    }
+
+    .s-slider {
+      width: 80%;
+      min-height: 200px;
+      // border:2px solid yellow;
+      margin: auto;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .s-slider .s1 {
+      flex-basis: 22%;
+      //border:3px solid green;
+
+    }
+
+    .s1 .box {
+      width: 80px;
+      height: 80px;
+      background-color: skyblue;
+      margin: 20px 80px;
+      border-radius: 50%;
+
+    }
+
+    .box i {
+      margin: 25px 20px;
+      font-size: 1.8em;
+    }
+
+    .box h1 {
+
+      font-size: 1.5em;
+    }
+
+    .content {
+      width: 100%;
+      min-height: 200px;
+      // border:1px solid black;
+    }
+
+    .content h4 {
+      font-weight: 400;
+      text-align: center;
+      text-align: justify;
+
+    }
+
+    .content h1 {
+      text-align: center;
+    }
+
+    .mid-slider {
+      width: 100%;
+      min-height: 600px;
+      background: linear-gradient(to left, #333333, darkblue)
+    }
+
+    .m1 {
+      width: 80%;
+      height: 100px;
+      //border:1px solid white;
+      margin: auto;
+      display: flex;
+      margi
+    }
+
+    .m1 button {
+      margin-left: 70%;
+      margin-top: 30px;
+      background-color: skyblue;
+      border: none;
+      border-radius: 5px;
+      padding: 15px 30px;
+
+    }
+
+    .m1 button:hover {
+      background-color: lightorange;
+      cursor: pointer;
+
+    }
+
+    .m1 h1 {
+      color: orange;
+      padding-top: 20px;
+
+    }
+
+    .m1 .m12 {
+      width: 500px;
+      height: 100px;
+      //border:1px solid white;
+    }
+
+    .m2 {
+
+
+      width: 80%;
+      height: 250px;
+      // border:1px solid white;
+      background-color: lightgray;
+      margin: auto;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+
+
+    }
+
+    .m21 {
+      width: 500px;
+      height: 100px;
+      //border:1px solid white;
+      margin-left: 20%;
+
+
+    }
+
+    .m21 button:hover {
+      background-color: lightyellow;
+
+    }
+
+    .m2 .box1 {
+      flex-basis: 33%;
+      border: 5px solid white;
+    }
+
+    .box1 i {
+      line-height: 250px;
+      margin-left: 45%;
+      font-size: 3.5em;
+    }
+
+    .m3 {
+      width: 80%;
+      height: 150px;
+      //border:1px solid white;
+      margin: auto;
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .m3 h2 {
+      color: orange;
+    }
+
+    .m2 .box1 {
+      flex-basis: 33%;
+      // border:5px solid white;
+    }
+
+    .m2 .box3 {
+      flex-basis: 33%;
+      //border:5px solid white;
+    }
+
+    .box3 h4 {
+      color: white;
+      margin-top: 20px;
+    }
+
+    .second-lastcontent {
+      width: 80%;
+      min-height: 400px;
+      // border:1px solid black; 
+      margin: auto;
+    }
+
+    .sl {
+      width: 100%;
+      min-height: 100px;
+      //border:1px solid blue;
+    }
+
+    .sl h1 {
+      color: darkblue;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .sl h3 {
+
+      text-align: center;
+      margin-top: 10px;
+
+    }
+
+    .sl2 {
+      width: 100%;
+      height: 250px;
+      margin-top: 40px;
+      //border:1px solid black;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .sl2 .box4 {
+      flex-basis: 23%;
+      //  border:1px solid yellow;
+    }
+
+    .box4 h1 {
+
+      color: darkblue;
+    }
+
+    .box4 h4 {
+      font-weight: 200;
+      text-align: justify;
+    }
+
+    .box4 button {
+      padding: 10px 40px;
+      background-color: skyblue;
+      border: none;
+      border-radius: 4px;
+
+
+
+    }
+
+    .box4 button:hover {
+      cursor: pointer;
+      background-color: darkblue;
+      color: white;
+    }
+
+    .last-content {
+      width: 80%;
+      min-height: 300px;
+      border: 1px solid lightgray;
+      margin: auto;
+
+
+    }
+
+    .last-content h1 {
+      color: darkblue;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .last-content h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .last-content h4 {
+      color: orange;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .logoo {
+      width: 30%;
+      height: 100px;
+      border: 1px solid lightgray;
+      display: flex;
+      margin: auto;
+    }
+
+    .logo1 {
+      flex: 15%;
+      border: 1px solid black;
+      display: flex;
+
+
+    }
+
+    .logo2 {
+      flex: 15%;
+      border: 1px solid black;
+    }
+
+    .logo3 {
+      flex: 15%;
+      border: 1px solid black;
+    }
+
+    .footer {
+      width: 100%;
+      min-height: 500px;
+      border: 1px solid black;
+      margin-top: 20px;
+      display: flex;
+      background: linear-gradient(to left, #333333, darkblue)
+    }
+
+    .parbox5 {
+      width: 90%;
+      min-height: 300px;
+      border: 1px solid white;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+
+    }
+
+    .parabox1 {
+      flex-basis: 20%;
+      border: 1px solid white;
+
+    }
+
+    .parabox1 h1 {
+      color: orange;
+      margin-bottom: 10px;
+
+    }
+
+    .parabox1 h4 {
+      color: white;
+
+    }
+
+    a {
+      color: blue;
+    }
+
+    a:hover {
+      transition: 0.5s;
+ padding:10px;
+    }
+
+    .parabox2 {
+      flex-basis: 20%;
+      border: 1px solid white;
+    }
+
+    .parabox2 h1 {
+      color: orange;
+    }
+
+    .parabox2 h4 {
+      color: white;
+      margin-top: 20px;
+    }
+
+    .parabox2 h3 {
+      color: skyblue;
+
+    }
+
+    form input {
+      padding: 8px 50px;
+      margin-top: 10px;
+    }
+
+    .parabox3 {
+      flex-basis: 20%;
+      border: 1px solid white;
+
+    }
+   .parabox3 .text
+    {
+      width:100%;
+      height:50px;
+     border:1px solid white;
+   }
+   .belowtext
+  {
+     width:100%;
+    height:90px;
+    border:1px solid white;
+     display:flex;
+       flex-direction:row;
+  }
+.belowtext .b1
+ {
+   flext-basis:20%;
+    border:1px solid white;
+ } 
+.belowtext .b2
+ {
+   flext-basis:30%;
+    border:1px solid white;
+ }*/
+  
+
+
+    .parabox4
+      {
+      flex-basis: 20%;
+      border: 1px solid red;
+
+    }
+
+    button {
+      background-color: skyblue;
+      color: white;
+      padding: 10px 30px;
+      margin-left: 50%;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: lightgray;
+    }
+
+    .threeDivs{
+      display: flex;
+      flex-direction: column;
+      border: 2px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-header">
+      <div class="logo">
+        <div class="l">
+
+          <i class="fa-solid fa-face-smile"></i>
+          <i class="fa-solid fa-face-sad-tear" id="a"></i>
+        </div>
+        <div class="name">
+          <h1>Your Logo</h1>
+        </div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li><a href="#">Portofolio</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <ul>
+            <br><button>blog</button>
+
+      </div>
+      <div class="label">
+        <h1>search</h1>
+      </div>
+      <div class="search">
+              <i class="fa-solid fa-magnifying-glass-location"></i>
+
+      </div>
+
+    </div>
+
+    <div class="main-slider">
+      <h1>GOOD DESIGN IS GOOD BUSINESS</h1>
+      <h2>you have made beautiful website.and each logo show creativity of yours</h2>
+      <button>Learn More </button>
+    </div>
+
+    <div class="slider">
+      <div class="b2">
+        <button>our services</button>
+        <div class="s-slider">
+          <div class="s1">
+
+            <div class="box">
+
+              <i class="fa-duotone fa-solid fa-laptop"></i>
+
+            </div>
+            <div class="content">
+              <h1> Web Design</h1>
+              <h4>The one what you can for multiple time you do request and grand the permission.</h4>
+            </div>
+
+          </div>
+          <div class="s1">
+            <div class="box">
+              <i class="fa-solid fa-magnifying-glass-location"></i>
+
+            </div>
+
+            <div class="content">
+              <h1> Search </h1>
+              <h4>The one what you can for multiple time you do request and grand the permission.</h4>
+            </div>
+          </div>
+
+          <div class="s1">
+            <div class="box">
+              <i class="fa-solid fa-cart-shopping"></i>
+
+            </div>
+            <div class="content">
+              <h1> Online Shop</h1>
+              <h4>The one what you can for multiple time you do request and grand the permission.</h4>
+            </div>
+          </div>
+
+          <div class="s1">
+            <div class="box">
+              <i class="fa-solid fa-hand-pointer"></i>
+            </div>
+            <div class="content">
+              <h1> Social Media </h1>
+              <h4>The one what you can for multiple time you do request and grand the permission.</h4>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mid-slider">
+      <div class="m1">
+        <div class="m12">
+          <h1>Our Portfollo Awesome</h1>
+        </div>
+        <div class="m21">
+          <button>More Weaks</h1>
+        </div>
+      </div>
+      <div class="m2">
+
+
+        <div class="box1">
+          <i class="fa-solid fa-camera"></i>
+        </div>
+
+
+        <div class="box1">
+          <i class="fa-solid fa-camera"></i>
+        </div>
+        <div class="box1">
+          <i class="fa-solid fa-camera"></i>
+        </div>
+
+
+
+
+      </div>
+      <div class="m3">
+        <div class="box3">
+          <h2>Lorem Ipsum Dolar Sit Amet</h2>
+          <h4>The one what you can for multiple time grand the permission.</h4>
+        </div>
+
+        <div class="box3">
+          <h2>Lorem Ipsum Dolar Sit Amet</h2>
+          <h4>The one what you can for multiple time grand the permission.</h4>
+        </div>
+
+        <div class="box3">
+          <h2>Lorem Ipsum Dolar Sit Amet</h2>
+          <h4>The one what you can for multiple time grand the permission.</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-lastcontent">
+      <div class="sl">
+        <h1>WHAT WE OFFER</h1>
+        <h3>The request and grand the permission.one what you can for multiple time you do request and grand the
+          permissionone what you can for multiple time you do request and grand the permission.</h3>
+
+      </div>
+      <div class="sl2">
+        <div class="box4">
+          <h1> Web Design</h1>
+          <h4>The one what you what you can for multiple time you do requestcan for multiple time you do request and
+            what you can for multiple time you do request grand the permission.</h4>
+          <button>Details</button>
+
+        </div>
+        <div class="box4">
+          <h1> Search</h1>
+          <h4>The one what you what you can for multiple time you do requestcan for multiple time you do request and
+            what you can for multiple time you do request grand the permission.</h4>
+          <button>Details</button>
+
+        </div>
+        <div class="box4">
+          <h1> Online Shop</h1>
+          <h4>The one what you what you can for multiple time you do requestcan for multiple time you do request and
+            what you can for multiple time you do request grand the permission.</h4>
+          <button>Details</button>
+
+        </div>
+        <div class="box4">
+          <h1>Social Media</h1>
+          <h4>The one what you what you can for multiple time you do requestcan for multiple time you do request and
+            what you can for multiple time you do request grand the permission.</h4>
+          <button>Details</button>
+        </div>
+      </div>
+    </div>
+    <div class="last-content">
+      <h1>TESTMONIALS</h1>
+      <h2>"Lorem ipsum dolor sit amet,consectetur adipiscing elit mauris necip at lacus commodo suscipit present
+        sollicitudin enim vel mirhon"</h2>
+      <h4>Jon Doe/CEO of Loremipsum</h4>
+
+      <div class="logoo">
+        <div class="logo1">
+
+        </div>
+        <div class="logo1">
+
+        </div>
+        <div class="logo1">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="parbox5">
+        <div class="parabox1">
+          <h1>BIRD FEEDS</h1><br>
+          <h4>Check out this great theme item</h3>
+            <a href="#">https://apafha.com</a>
+            <h4>weeks ago</h3><br>
+              <hr>
+              </hr><br>
+
+              <h4>Check out this great theme item</h4>
+              <a href="#">https://apafha.com</a>
+              <h4>weeks ago</h4><br>
+              <hr>
+              </hr><br>
+
+              <h4>Check out this great theme item</h4>
+              <a href="#">https://apafha.com</a>
+
+              <h4>weeks ago</h4><br>
+              <hr>
+              </hr>
+
+
+        </div>
+        <div class="parabox2">
+          <h1>NEW SLETTER</h1>
+          <h4>one what you can for multiple time you do request and grand can for multiple time you do request. </h4>
+          <br>
+          <hr>
+          </hr><br>
+          <h3>Your Email Address</h3>
+          <form>
+            <input type="text">
+          </form><br>
+          <hr>
+          </hr>
+          <button>Sign Up</button>
+        </div>
+
+        <div class="parabox3">
+         
+             
+          </div>
+                     
+
+       
+
+        <div class="parabox4">
+hi
+        </div>
+
+
+
+        <div>
+        </div>
+
+
+
+      </div>
